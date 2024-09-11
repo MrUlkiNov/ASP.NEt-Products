@@ -14,12 +14,11 @@ namespace ProductCatalog.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
-            // Добавляем начальные данные
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, Name = "Молоко", Price = 9.99m, Stock = 100 },
-                new Product { Id = 2, Name = "Хлеб", Price = 19.99m, Stock = 50 }
+                new Product { Id = 1, Name = "Хлеб", Price = 10.99m, Stock = 50 },
+                new Product { Id = 2, Name = "Молоко", Price = 15.99m, Stock = 30 },
+                new Product { Id = 3, Name = "Онигири", Price = 8.99m, Stock = 100 },
+                new Product { Id = 4, Name = "Антонова Анна", Price = 0m, Stock = 1 }
             );
         }
     }
